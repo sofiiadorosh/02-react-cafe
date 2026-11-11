@@ -1,5 +1,7 @@
+import css from './App.module.css';
+
 function App() {
-  return <h1>02 React Cafe</h1>;
+  return <div className={css.app}></div>;
 }
 
 export default App;
