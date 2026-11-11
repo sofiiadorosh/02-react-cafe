@@ -3,6 +3,7 @@ import babel from '@rolldown/plugin-babel';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
+  base: '/02-react-cafe/',
   plugins: [
     react(),
     babel({
