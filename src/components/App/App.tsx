@@ -28,10 +28,11 @@ function App() {
     });
   };
 
-  const totalVotes = Object.values(votes).reduce((acc, vote) => acc + vote, 0);
+  const totalVotes = votes.good + votes.neutral + votes.bad;
   const positiveRate = totalVotes
     ? Math.round((votes.good / totalVotes) * 100)
     : 0;
+  const canReset = totalVotes > 0;
 
   return (
     <div className={css.app}>
@@ -39,7 +40,7 @@ function App() {
       <VoteOptions
         onVote={handleVote}
         onReset={resetVotes}
-        canReset={totalVotes > 0}
+        canReset={canReset}
       />
       {totalVotes > 0 ? (
         <VoteStats

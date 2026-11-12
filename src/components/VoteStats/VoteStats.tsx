@@ -1,5 +1,5 @@
 import css from './VoteStats.module.css';
-import { VOTE_TYPES, type Votes } from '../../types/votes';
+import type { Votes } from '../../types/votes';
 
 interface VoteStatsProps {
   votes: Votes;
@@ -10,11 +10,15 @@ interface VoteStatsProps {
 function VoteStats({ votes, totalVotes, positiveRate }: VoteStatsProps) {
   return (
     <div className={css.container}>
-      {VOTE_TYPES.map((type) => (
-        <p className={css.stat} key={type}>
-          {type}: <strong>{votes[type]}</strong>
-        </p>
-      ))}
+      <p className={css.stat}>
+        Good: <strong>{votes.good}</strong>
+      </p>
+      <p className={css.stat}>
+        Neutral: <strong>{votes.neutral}</strong>
+      </p>
+      <p className={css.stat}>
+        Bad: <strong>{votes.bad}</strong>
+      </p>
       <p className={css.stat}>
         Total: <strong>{totalVotes}</strong>
       </p>
