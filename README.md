@@ -3,7 +3,7 @@
 A small React + TypeScript app where visitors rate a café as **Good**,
 **Neutral** or **Bad** and instantly see the feedback statistics.
 
-**Live demo:** _coming soon on Vercel_
+**Live demo:** https://02-react-cafe-eight-amber.vercel.app/
 
 ## Features
 
