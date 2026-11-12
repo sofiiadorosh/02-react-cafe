@@ -10,8 +10,8 @@ interface VoteStatsProps {
 function VoteStats({ votes, totalVotes, positiveRate }: VoteStatsProps) {
   return (
     <div className={css.container}>
-      {VOTE_TYPES.map((type, index) => (
-        <p className={css.stat} key={index}>
+      {VOTE_TYPES.map((type) => (
+        <p className={css.stat} key={type}>
           {type}: <strong>{votes[type]}</strong>
         </p>
       ))}

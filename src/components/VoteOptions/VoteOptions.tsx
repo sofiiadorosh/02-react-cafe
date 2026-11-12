@@ -10,8 +10,8 @@ interface VoteOptionsProps {
 function VoteOptions({ onVote, onReset, canReset }: VoteOptionsProps) {
   return (
     <div className={css.container}>
-      {VOTE_TYPES.map((type, index) => (
-        <button className={css.button} key={index} onClick={() => onVote(type)}>
+      {VOTE_TYPES.map((type) => (
+        <button className={css.button} key={type} onClick={() => onVote(type)}>
           {type}
         </button>
       ))}
