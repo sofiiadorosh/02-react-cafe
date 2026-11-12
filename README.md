@@ -3,7 +3,7 @@
 A small React + TypeScript app where visitors rate a café as **Good**,
 **Neutral** or **Bad** and instantly see the feedback statistics.
 
-**Live demo:** https://sofiiadorosh.github.io/02-react-cafe/
+**Live demo:** _coming soon on Vercel_
 
 ## Features
 
@@ -18,7 +18,7 @@ A small React + TypeScript app where visitors rate a café as **Good**,
 - [Vite](https://vite.dev/) with React Compiler
 - CSS Modules and [modern-normalize](https://github.com/sindresorhus/modern-normalize)
 - ESLint, Prettier, Husky and lint-staged
-- GitHub Actions for deployment to GitHub Pages
+- [Vercel](https://vercel.com/) for deployment
 
 ## Project structure
 
@@ -45,7 +45,7 @@ npm install
 npm run dev
 ```
 
-The app runs at http://localhost:5173/02-react-cafe/.
+The app runs at http://localhost:5173/.
 
 ## Scripts
 
@@ -63,5 +63,5 @@ A pre-commit hook runs ESLint and Prettier on staged files.
 
 ## Deployment
 
-Every push to `main` builds the app and deploys it to GitHub Pages via
-[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml).
+The app is deployed on Vercel. Every push to `main` triggers a new
+production build and deploy.
